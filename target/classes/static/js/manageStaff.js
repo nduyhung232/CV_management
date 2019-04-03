@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var a = "DuyHung-CV.pdf";
 
     $.ajax({
         type: "GET",
@@ -8,7 +9,7 @@ $(document).ready(function () {
         cache: false,
         timeout: 600000,
         success: function (data) {
-            console.log(data);
+            console.log("list CV:"+data);
             for (var i = 0; i < data.length; i++) {
                 var able = "<li class='row cvinfo-ele-able'>" +
                     " <div class='col-lg-2'>\n" +
@@ -29,8 +30,9 @@ $(document).ready(function () {
                     "                    </div>\n" +
                     "                </div>\n" +
                     "                <div class=\"col-lg-2\" style='color: #929292'>\n" +
-                    "Ngày Update: " + data[i].ngayTao +
-                    "  </div>" +
+                    "<p>Ngày Update: " + data[i].ngayTao +
+                    "</p>" +
+                    "<p> <a href='/getfile?link=file_cv/" + a + "'>test</a></p> </div>" +
                     "</li>";
 
                 var disAble = "<li class='row'style='background: #d6d6d6'>" +
@@ -52,7 +54,8 @@ $(document).ready(function () {
                     "                    </div>\n" +
                     "                </div>\n" +
                     "                <div class=\"col-lg-2\" style='color: #929292'>\n" +
-                    "Ngày Update: " + data[i].ngayTao +
+                    "<p>Ngày Update: " + data[i].ngayTao +
+                    "</p>" +
                     " </div>" +
                     "</li>";
 
@@ -162,8 +165,9 @@ $(document).ready(function () {
                         "                    </div>\n" +
                         "                </div>\n" +
                         "                <div class=\"col-lg-2\" style='color: #929292'>\n" +
-                        "Ngày Update: " + data[i].ngayTao +
-                        "                </div>"
+                        "<p>Ngày Update: " + data[i].ngayTao +
+                        "</p>" +
+                        "   </div>"
                     )
                 }
             },

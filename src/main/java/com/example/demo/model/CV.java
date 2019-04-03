@@ -7,7 +7,7 @@ public class CV {
     private String name;
     private String ngayTao;
     private String soDT;
-    private byte fileCV;
+    private String fileCV;
     private String diaDiem;
     private String donViUp;
     private int idNguoiThayDoi;
@@ -16,7 +16,7 @@ public class CV {
     public CV() {
     }
 
-    public CV(String name, String ngayTao, String soDT, byte fileCV, String diaDiem, String donViUp, int id, int idNguoiThayDoi) {
+    public CV(String name, String ngayTao, String soDT, String fileCV, String diaDiem, String donViUp, int id, int idNguoiThayDoi) {
         this.name = name;
         this.ngayTao = ngayTao;
         this.soDT = soDT;
@@ -83,11 +83,11 @@ public class CV {
         this.soDT = soDT;
     }
 
-    public byte getFileCV() {
+    public String getFileCV() {
         return fileCV;
     }
 
-    public void setFileCV(byte fileCV) {
+    public void setFileCV(String fileCV) {
         this.fileCV = fileCV;
     }
 
