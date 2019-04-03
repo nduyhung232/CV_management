@@ -49,8 +49,9 @@
                             <span>Họ Tên</span>
                             <span><input id="edit-hoten" style="height: 23px; width: 200px"></span>
                         </p>
+
                         <p>
-                            <span>Vị Trí</span>
+                            <span>Vị Trí</span> <!--Chua hoan thanh-->
                             <span><input id="edit-vitri" style="height: 23px; width: 200px"></span>
                         </p>
                         <p>
@@ -68,9 +69,16 @@
                             <span>Đơn Vị Up</span>
                             <input id="edit-donviup" disabled>
                         </p>
-                        <p>
-                            <span>File CV</span>
-                            <span><input id="edit-file" type="file" style="height: 23px; width: 200px"></span>
+
+                        <p class="upload-container">
+                            <span>fileCV</span>
+                            <form id="singleUploadForm1" style="display: inline-block" name="singleUploadForm1">
+                                <input type="file" name="file" class="file-input" required/>
+                            </form>
+                            <div class="upload-response">
+                                <div id="singleFileUploadError1"></div>
+                                <div id="singleFileUploadSuccess1"></div>
+                            </div>
                         </p>
 
                         <p>
