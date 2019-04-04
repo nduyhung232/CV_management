@@ -99,10 +99,14 @@ $(document).ready(function () {
         timeout: 600000,
         success: function (data) {
             for (var i = 0; i < data.length; i++) {
-                for (var i = 0; i < data.length; i++) {
-                    $("#select-vitri").append(new Option(data[i].name, data[i].id));
-                }
+                $("#select-vitri").append(new Option(data[i].name, data[i].id));
             }
+            $('#select-vitri').multiselect({
+                nonSelectedText: 'Chọn vị trí',
+                enableFiltering: true,
+                enableCaseInsensitiveFiltering: true,
+                buttonWidth:'100%'
+            });
         }
     });
 
@@ -125,10 +129,14 @@ $(document).ready(function () {
 
     $("#btn-search").click(function () {
         var editHoTen = $("#edit-hoten").val();
-        var editViTri = $("#select-vitri").val();
         var editDonVi = $("#select-donvi").val();
         var editDiaDiem = $("#select-diadiem").val();
-
+        var selectViTri = [];
+        $("#select-vitri option:selected").each(function(){
+           selectViTri.push($("#select-vitri option:selected").val());
+            $(this).prop('selected', false)
+        });
+        console.log(selectViTri);
         $.ajax({
             url: '/search',
             dataType: 'json',
@@ -137,7 +145,7 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify({
                 hoten: editHoTen,
-                idViTri: editViTri,
+                idViTri: selectViTri,
                 idDiaDiem: editDiaDiem,
                 idDonVi: editDonVi
             }),
