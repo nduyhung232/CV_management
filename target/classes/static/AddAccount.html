@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Add Account</title>9
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-4.3.1-dist/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="bootstrap-4.3.1-dist/css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">ViettelPost</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a id="signout" class="nav-link" href="#">Sign out</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid" id="aaa">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul id="ul-nav" class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Manage.html">
+                            Quản lý CV
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="AddCV.html">
+                            Thêm CV
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>
+                            <span>UserName</span>
+                            <span><input id="edit-username" style="height: 23px; width: 200px"></span>
+                        </p>
+                        <p>
+                            <span>Pass</span>
+                            <span><input id="edit-pass" style="height: 23px; width: 200px"></span>
+                        </p>
+                        <p>
+                            <span>HoTen</span>
+                            <span><input id="edit-hoten" style="height: 23px; width: 200px"></span>
+                        </p>
+
+                        <p>
+                            <span>Đơn Vị</span>
+                            <select id="select-donvi">
+
+                            </select>
+                        </p>
+                        <p>
+                            <span>Số Điện Thoai</span>
+                            <span><input id="edit-soDT" style="height: 23px; width: 200px"></span>
+                        </p>
+                        <p>
+                            <span>Phân quyền</span>
+                            <select id="select-status">
+                                <option>admin</option>
+                                <option>user</option>
+                            </select>
+                        </p>
+                        <p>
+                            <button id="btn-addAccount">Thêm Account</button>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>
+                            <span>Đơn vị</span>
+                            <input id="edit-addDonVi" style="height: 23px; width: 200px">
+                        </p>
+                        <p>
+                            <button id="btn-addDonVi">Thêm đơn vị</button>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/general.js"></script>
+<script src="js/addAccount.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Add CV</title>9
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-4.3.1-dist/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="bootstrap-4.3.1-dist/css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">ViettelPost</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a id="signout" class="nav-link" href="#">Sign out</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid" id="aaa">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul id="ul-nav" class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Manage.html">
+                            Quản lý CV
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Thêm CV
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>
+                            <span>Họ Tên</span>
+                            <span><input id="edit-hoten" style="height: 23px; width: 200px"></span>
+                        </p>
+
+                        <p>
+                            <span>Vị Trí</span> <!--Chua hoan thanh-->
+                            <span><input id="edit-vitri" style="height: 23px; width: 200px"></span>
+                        </p>
+                        <p>
+                            <span>Số Điện Thoại</span>
+                            <span><input id="edit-soDT" style="height: 23px; width: 200px"></span>
+                        </p>
+                        <p>
+                            <span>Địa Điểm</span>
+                            <select id="select-diadiem">
+
+                            </select>
+                        </p>
+
+                        <p>
+                            <span>Đơn Vị Up</span>
+                            <input id="edit-donviup" disabled>
+                        </p>
+
+                        <p class="upload-container">
+                            <span>fileCV</span>
+                            <form id="singleUploadForm1" style="display: inline-block" name="singleUploadForm1">
+                                <input type="file" name="file" class="file-input" required/>
+                            </form>
+                            <div class="upload-response">
+                                <div id="singleFileUploadError1"></div>
+                                <div id="singleFileUploadSuccess1"></div>
+                            </div>
+                        </p>
+
+                        <p>
+                            <button id="btn-addCV">Thêm CV</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/general.js"></script>
+<script src="js/addCV.js"></script>
+
+</body>
+</html>
